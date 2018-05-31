@@ -50,3 +50,14 @@ $(document).ready(function() {
     $("form#multiply")[0].reset();
   });
 });
+
+$(document).ready(function() {
+  $("form#division").submit(function(event) {
+    event.preventDefault();
+    var number1 = parseInt($("#divide1").val());
+    var number2 = parseInt($("#divide2").val());
+    var result = division(number1, number2);
+    $("#output-division").text(result);
+    $("form#division")[0].reset();
+  });
+});
